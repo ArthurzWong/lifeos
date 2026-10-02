@@ -43,6 +43,17 @@ npx serve .        # or: python3 -m http.server
 - Never sends sensitive information without explicit human approval
 - Never exposes medical details to family members without the matching permission
 
+## Deployment
+
+- **Live:** https://lifeos-swart-gamma.vercel.app
+- **Auto-deploy:** every `git push` to `main` triggers a production deployment via the Vercel × GitHub integration; every PR gets its own preview URL.
+- No build step — Vercel serves the static files as-is.
+
+```bash
+git add -A && git commit -m "..." && git push   # deploys automatically
+vercel --prod                                    # manual alternative
+```
+
 ## Status
 
 Prototype (P0 scope complete). Production architecture per spec: Next.js/React PWA, Node/TypeScript backend, Supabase (Postgres/Auth/Storage), LLM abstraction layer, RAG knowledge layer.
