@@ -1,0 +1,16 @@
+# IDE / OS
+.DS_Store
+Thumbs.db
+
+# Logs & deps
+node_modules/
+npm-debug.log*
+
+# Env & secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+
+# Vercel
+.vercel
